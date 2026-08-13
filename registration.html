@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Competitive Exam Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Online Competitive Exam Registration Form</h2>
+
+    <form id="regForm">
+
+        <label>First Name</label>
+        <input type="text" id="fname">
+
+        <label>Last Name</label>
+        <input type="text" id="lname">
+
+        <label>Father Name</label>
+        <input type="text" id="father">
+
+        <label>Mother Name</label>
+        <input type="text" id="mother">
+
+        <label>Date of Birth</label>
+        <input type="date" id="dob">
+
+        <label>Gender</label><br>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+
+        <h3>Education Details</h3>
+
+        <table border="1">
+            <tr>
+                <th>Qualification</th>
+                <th>Board/University</th>
+                <th>Percentage</th>
+            </tr>
+
+            <tr>
+                <td><input type="text" id="qualification"></td>
+                <td><input type="text" id="board"></td>
+                <td><input type="number" id="percentage"></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <label>Upload Passport Size Photo</label>
+        <input type="file" id="photo">
+
+        <label>Upload Signature</label>
+        <input type="file" id="signature">
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="registration.js"></script>
+
+</body>
+</html>
