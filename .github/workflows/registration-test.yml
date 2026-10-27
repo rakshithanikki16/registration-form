@@ -15,7 +15,7 @@ jobs:
         run: |
           test -f registration.html
           test -f registration.css
-          test -f registration.js
+          test -f missing.js
           echo "All registration files exist!"
 
       - name: Test successful execution
