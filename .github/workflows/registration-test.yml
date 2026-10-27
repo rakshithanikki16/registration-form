@@ -1,0 +1,22 @@
+
+name: Registration Form Tests
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check registration files
+        run: |
+          test -f registration.html
+          test -f registration.css
+          test -f registration.js
+          echo "All registration files exist!"
+
+      - name: Test successful execution
+        run: echo "GitHub Actions is working!"
