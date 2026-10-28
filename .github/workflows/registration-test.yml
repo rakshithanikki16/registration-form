@@ -15,8 +15,8 @@ jobs:
         run: |
           test -f registration.html
           test -f registration.css
-          test -f missing.js
+          test -f registration.js
           echo "All registration files exist!"
 
       - name: Test successful execution
-        run: echo "GitHub Actions is working!"
+        run: echo "Automatic trigger test successful!"
