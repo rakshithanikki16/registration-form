@@ -1,0 +1,30 @@
+
+name: Registration Form CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  registration-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        run: |
+          test -f registration.html
+          test -f registration.css
+          test -f registration.js
+          echo "All registration form files exist!"
+
+      - name: Validate basic HTML structure
+        run: |
+          grep -qi '<html' registration.html
+          grep -qi '</html>' registration.html
+          echo "HTML structure check passed!"
